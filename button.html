@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="card-body">
+                <table class="table table-bordered table table-striped table table-hover">
+                    <thead><p class=" h3 text-center">Buttons</p>
+                        <div class="col-2 m-2">
+                            <button type="button" class="btn btn-success">Add new</button>
+                        </div>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Leence</td>
+                        <td>Lidonde</td>
+                        <td>Female</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-outline-danger">Delete</button>
+                            <button type="button" class="btn btn-info btn-lg">Edit</button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </div>
+                </table>
+                <!-- Disabed Buttons They dont have pointer events -->
+            <!-- Block Buttons -->
+            <div class="row">
+                    <div class="d-grid gap-2 m-2">
+                        <button class="btn btn-primary" type="button">Button</button>
+                        <button class="btn btn-primary" type="button">Button</button>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-4 m-2">
+                    <a href="./grid.html" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Next Page</a>
+                    <a href="./badge.html" class="btn btn-danger disabled" tabindex="-1" role="button" aria-disabled="true">Previous Page</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
