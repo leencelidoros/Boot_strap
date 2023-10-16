@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badges</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+        <div class="card-header">
+            <div class="row m-2">
+                <div class="col-md-5 mx-auto">
+                  <h1>Talk To <span class="badge bg-success">us</span></h1>
+                </div>
+                <div class="col-md-3 mx-auto ">
+                    <button type="button" class="btn btn-primary position-relative">
+                    Notifications
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        99+
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                    </button>
+                </div>
+            </div> 
+            <div class="card">
+                <table class="table table-bordered table table-striped table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Leence</td>
+                        <td>Lidonde</td>
+                        <td>Female</td>
+                        <td>
+                            <button type="button" class="btn btn-primary position-relative ">online
+                                <span class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle">
+                                    <span class="visually-hidden">New alerts</span>
+                                </span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Leence</td>
+                        <td>Lidonde</td>
+                        <td>male</td>
+                        <td>
+                            <button type="button" class="btn btn-primary position-relative ">offline
+                                <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                    <span class="visually-hidden">New alerts</span>
+                                </span>
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="col-10 text-end mb-2">
+                    <span class="badge rounded-pill text-bg-info">Chat with US</span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
