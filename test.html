@@ -1,67 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-</head>
-<body>
-    <div class="container-fluid">
-        <div class="row mt-3">
-            <div class="col-md-5 mx-auto">
-                <div class="card">
-                    <div class="card-body">
-                        <select class="form-select form-select-lg mb-3" aria-label="Large select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                          
-                          <select class="form-select form-select-sm" aria-label="Small select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                    </div>
-                </div>
+<form id="myForm">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="name" name="name" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" name="email" required>
+  </div>
+  <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+</form>
 
-                <div class="card  mt-3">
-                    <div class="card-body">
-                        <div class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                              <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">List group item heading</h5>
-                                <small>3 days ago</small>
-                              </div>
-                              <p class="mb-1">Some placeholder content in a paragraph.</p>
-                              <small>And some small print.</small>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                              <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">List group item heading</h5>
-                                <small class="text-body-secondary">3 days ago</small>
-                              </div>
-                              <p class="mb-1">Some placeholder content in a paragraph.</p>
-                              <small class="text-body-secondary">And some muted small print.</small>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                              <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">List group item heading</h5>
-                                <small class="text-body-secondary">3 days ago</small>
-                              </div>
-                              <p class="mb-1">Some placeholder content in a paragraph.</p>
-                              <small class="text-body-secondary">And some muted small print.</small>
-                            </a>
-                          </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+<div class="alert alert-danger alert-dismissible fade show" role="alert" id="alertMessage" style="display: none;">
+  Please fill in all the required fields.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+Add a JavaScript function to validate the form and display the Bootstrap alert if fields are empty. Place this script just before the closing </body> tag:
+html
+Copy code
+<script>
+  document.getElementById("myForm").addEventListener("submit", function (event) {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+
+    if (!name || !email) {
+      event.preventDefault(); // Prevent the form submission
+
+      // Display the Bootstrap alert
+      document.getElementById("alertMessage").style.display = "block";
+    }
+  });
+</script>
+In this updated code, we use the Bootstrap alert component to create an alert message. The alert is initially hidden (using style="display: none;") and can be dismissed by clicking the close button (the "x" icon).
+
+When the user clicks the submit button without filling out the required fields, the alert message will be displayed using document.getElementById("alertMessage").style.display = "block";.
+
+
+
+
 
