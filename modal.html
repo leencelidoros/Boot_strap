@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal </title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="card h-75 w-50">
-                <div class="modal" tabindex="-1">
+        <div class="row mt-3">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#MyModal">
+                Launch demo modal <i class="bi bi-8-square"></i>
+              </button>
+                <div class="modal" id="myModal" tabindex="-1">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -19,6 +22,7 @@
                             </div>
                             <div class="modal-body">
                                 <p>Modal text is here</p>
+                                <input type="text" class="form-control" id="myModalInput">
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -34,7 +38,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script>
         const myModal = document.getElementById('myModal')
-        const myInput = document.getElementById('myInput')
+        const myInput = document.getElementById('myModalInput')
 
         myModal.addEventListener('shown.bs.modal', () => {
         myInput.focus()
