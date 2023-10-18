@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popover</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <button type="button" class="btn btn-lg btn-danger mt-2" data-bs-toggle="popover" 
+        data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover
+        </button> 
+        <div class="row m-2">
+            <div class="col">
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+                    Popover on top
+                </button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Top popover">
+                    Popover on bottom
+                </button>
+            </div>
+            <div class="col">
+                <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+                    <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+                </span>
+            </div>
+            <div class="col">
+                <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" 
+                data-bs-title="Dismissible popover"
+                data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+            </div>
+        </div>
+    </div> 
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize popover
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl);
+        });
+    </script>
+</body>
+</html>
