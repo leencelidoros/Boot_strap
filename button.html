@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="card-body">
+            <div class="card">
                 <table class="table table-bordered table table-striped table table-hover">
                     <thead>
                         <div class="row">
@@ -60,12 +60,13 @@
                         </td>
                     </tr>
                     </tbody>
-                    </div>
                 </table>
                 <!-- Checkbox and Radio button Groups -->
-                <div class="row">
+                <div class="row mt-3">
                     <div class="col">
-                        <p class="h3">Select course</p>
+                        <div class="card">
+                            <div class="card-header">Checkbox and Radio buttons</div>
+                        </div>
                         <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
                             <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
                             <label class="btn btn-outline-primary" for="btncheck1">Software</label>
@@ -75,8 +76,8 @@
                             <label class="btn btn-outline-primary" for="btncheck3">Hardware</label>
                         </div>
                     </div>
-                </div>
-                <div class="row">
+                </div>  
+                <div class="row mt-3">
                     <div class="col">
                         <p class="h3">Select One</p>
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
@@ -91,15 +92,14 @@
                 </div>
                 <!-- Disabed Buttons They dont have pointer events -->
             <!-- Block Buttons -->
-            <div class="row">
+            <div class="row mt-3">
                 <div class="col-4 m-2">
                     <a href="./grid.html" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Next Page</a>
                     <a href="./badge.html" class="btn btn-danger disabled" tabindex="-1" role="button" aria-disabled="true">Previous Page</a>
                 </div>
             </div>
-        </div>
         <!-- Button Groups -->
-        <div class="row">
+        <div class="row mt-3">
             <div class="col-xl-3 offset-xl-6">
                 <div class="btn-group" role="group" aria-label="Basic outlined-example">
                     <button type="button" class="btn btn-outline-danger">Danger</button>
@@ -109,7 +109,7 @@
             </div>
         </div>
         <!-- Vertical alignments of buttons -->
-        <div class="row">
+        <div class="row mt-3">
             <div class="col">
                 <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
                     <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
@@ -120,7 +120,8 @@
                     <label class="btn btn-outline-success" for="vbtn-radio3">Forward</label>
                 </div>                  
             </div>
-        </div>         
+        </div>
+    </div>         
     </div>
     <script src="./js/bootstrap.min.js"></script>
 </body>
